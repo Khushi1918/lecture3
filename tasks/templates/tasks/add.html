@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Add Tasks</title>
+</head>
+<body>
+	 <h1>Add task</h1>
+	 <form action="{% url 'tasks:add' %}" method="post">
+	 	{% csrf_token %}
+	 	
+	 	<!-- <input type="text" name="task" placeholder="add here..."> -->
+	 	{{form}}
+	 	<input type="submit">
+	 </form>
+	 <a href="{% url 'tasks:index' %}"> View tasks</a>
+</body>
+</html>
